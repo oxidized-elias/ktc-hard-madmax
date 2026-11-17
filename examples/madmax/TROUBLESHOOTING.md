@@ -5,7 +5,7 @@ Start with [the setup guide](README.md) and
 
 | Symptom | Checks |
 | --- | --- |
-| No MadMax installer option | Run this changed checkout's `install.sh --madmax`; verify `git branch --show-current` reports `ktc-hard-madmax` and the remote points to `oxidized-elias/klipper-toolchanger-hard` |
+| No MadMax installer option | Run this changed checkout's `install.sh --madmax`; verify `git branch --show-current` reports `main` and the remote points to `oxidized-elias/klipper-toolchanger-hard` |
 | `calibrate all dock coordinates` | Measure the named tool and explicitly enable its calibration flag |
 | Missing/out-of-range coordinate | Replace `None`; verify docking coordinates and configured X/Y travel; do not expand travel merely to silence the guard |
 | Wrong Y ordering | Confirm front-dock orientation and every tool's Y overrides |
@@ -82,8 +82,20 @@ git branch --show-current
 git log -1 --oneline
 ```
 
-For this implementation the branch must be `ktc-hard-madmax`; the fork's `main`
-branch tracks the upstream baseline. Set Moonraker's `primary_branch` accordingly. If you
+For this implementation use `main`, which contains the MadMax work in this fork. Set Moonraker's `primary_branch` accordingly. If you
 installed the wrong branch, keep a configuration backup and clone the intended
 branch into a separate directory before changing extension symlinks. Do not
 blindly switch an active installation between implementations.
+
+If your checkout still tracks the former `ktc-hard-madmax` branch, migrate it with
+an unchanged working tree:
+
+```sh
+git fetch origin
+git switch main
+git merge --ff-only origin/main
+```
+
+Verify that `origin` points to `oxidized-elias/klipper-toolchanger-hard` before
+running those commands. Set Moonraker's `primary_branch: main`; keep its `path`
+pointing to your actual existing clone directory.
