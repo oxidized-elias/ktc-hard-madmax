@@ -2,10 +2,10 @@
 
 This fork adapts [Contomo/klipper-toolchanger-hard](https://github.com/Contomo/klipper-toolchanger-hard)
 for MadMax, with current Kalico probing compatibility fixes. MadMax support
-lives on [`main`](https://github.com/oxidized-elias/klipper-toolchanger-hard/tree/main)
+lives on [`ktc-hard-madmax`](https://github.com/oxidized-elias/klipper-toolchanger-hard/tree/ktc-hard-madmax)
 of [oxidized-elias/klipper-toolchanger-hard](https://github.com/oxidized-elias/klipper-toolchanger-hard).
 
-Use `main` when cloning or configuring updates for this version.
+Use `ktc-hard-madmax` when cloning or configuring updates for this version.
 The separate Easy Install MadMax implementation lives in another repository;
 its configuration and installer are different. Do not switch an installed printer
 between implementations without a configuration migration.
@@ -35,7 +35,7 @@ Clone the named branch into a separate directory over SSH on the printer:
 
 ```sh
 cd ~
-git clone --branch main --single-branch https://github.com/oxidized-elias/klipper-toolchanger-hard.git ktc-hard-madmax
+git clone --branch ktc-hard-madmax --single-branch https://github.com/oxidized-elias/klipper-toolchanger-hard.git ktc-hard-madmax
 cd ~/ktc-hard-madmax
 ./install.sh --madmax
 ```
@@ -65,11 +65,11 @@ type: git_repo
 channel: dev
 path: ~/ktc-hard-madmax
 origin: https://github.com/oxidized-elias/klipper-toolchanger-hard.git
-primary_branch: main
+primary_branch: ktc-hard-madmax
 managed_services: klipper
 ```
 
-Use one update-manager entry per checkout, with `primary_branch: main`. Back up editable
+Use one update-manager entry per checkout, with `primary_branch: ktc-hard-madmax`. Back up editable
 printer configuration before updating. Rerun `./install.sh --madmax` when new
 Python extensions or symlinks are added, then review and restart manually.
 
