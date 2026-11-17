@@ -2,8 +2,8 @@
 
 This fork adapts [Contomo/klipper-toolchanger-hard](https://github.com/Contomo/klipper-toolchanger-hard)
 for MadMax, with current Kalico probing compatibility fixes. MadMax support
-lives on [`ktc-hard-madmax`](https://github.com/oxidized-elias/klipper-toolchanger-hard/tree/ktc-hard-madmax)
-of [oxidized-elias/klipper-toolchanger-hard](https://github.com/oxidized-elias/klipper-toolchanger-hard).
+lives on [`ktc-hard-madmax`](https://github.com/oxidized-elias/ktc-hard-madmax/tree/ktc-hard-madmax)
+of [oxidized-elias/ktc-hard-madmax](https://github.com/oxidized-elias/ktc-hard-madmax).
 
 Use `ktc-hard-madmax` when cloning or configuring updates for this version.
 The separate Easy Install MadMax implementation lives in another repository;
@@ -35,7 +35,7 @@ Clone the named branch into a separate directory over SSH on the printer:
 
 ```sh
 cd ~
-git clone --branch ktc-hard-madmax --single-branch https://github.com/oxidized-elias/klipper-toolchanger-hard.git ktc-hard-madmax
+git clone --branch ktc-hard-madmax --single-branch https://github.com/oxidized-elias/ktc-hard-madmax.git ktc-hard-madmax
 cd ~/ktc-hard-madmax
 ./install.sh --madmax
 ```
@@ -64,7 +64,7 @@ Add to `moonraker.conf`, using your actual clone path if it differs:
 type: git_repo
 channel: dev
 path: ~/ktc-hard-madmax
-origin: https://github.com/oxidized-elias/klipper-toolchanger-hard.git
+origin: https://github.com/oxidized-elias/ktc-hard-madmax.git
 primary_branch: ktc-hard-madmax
 managed_services: klipper
 ```

@@ -5,7 +5,7 @@ Start with [the setup guide](README.md) and
 
 | Symptom | Checks |
 | --- | --- |
-| No MadMax installer option | Run this changed checkout's `install.sh --madmax`; verify `git branch --show-current` reports `ktc-hard-madmax` and the remote points to `oxidized-elias/klipper-toolchanger-hard` |
+| No MadMax installer option | Run this changed checkout's `install.sh --madmax`; verify `git branch --show-current` reports `ktc-hard-madmax` and the remote points to `oxidized-elias/ktc-hard-madmax` |
 | `calibrate all dock coordinates` | Measure the named tool and explicitly enable its calibration flag |
 | Missing/out-of-range coordinate | Replace `None`; verify docking coordinates and configured X/Y travel; do not expand travel merely to silence the guard |
 | Wrong Y ordering | Confirm front-dock orientation and every tool's Y overrides |
@@ -96,6 +96,6 @@ git switch ktc-hard-madmax
 git merge --ff-only origin/ktc-hard-madmax
 ```
 
-Verify that `origin` points to `oxidized-elias/klipper-toolchanger-hard` before
+Verify that `origin` points to `oxidized-elias/ktc-hard-madmax` before
 running those commands. Set Moonraker's `primary_branch: ktc-hard-madmax`; keep its `path`
 pointing to your actual existing clone directory.
