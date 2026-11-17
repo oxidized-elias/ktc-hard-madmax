@@ -32,13 +32,13 @@ accelerometer drop detection, liftbars or third-party offset calibration macros.
 ## Installation
 
 This KTC-Hard implementation lives on the `ktc-hard-madmax` branch of
-[oxidized-elias/ktc-easy-madmax](https://github.com/oxidized-elias/ktc-easy-madmax/tree/ktc-hard-madmax).
-The repository's `main` branch contains the separate Easy Install implementation.
+[oxidized-elias/klipper-toolchanger-hard](https://github.com/oxidized-elias/klipper-toolchanger-hard/tree/ktc-hard-madmax).
+The fork's `main` branch tracks the upstream baseline; select this MadMax branch.
 Clone this branch explicitly into its own directory:
 
 ```sh
 cd ~
-git clone --branch ktc-hard-madmax --single-branch https://github.com/oxidized-elias/ktc-easy-madmax.git ktc-hard-madmax
+git clone --branch ktc-hard-madmax --single-branch https://github.com/oxidized-elias/klipper-toolchanger-hard.git ktc-hard-madmax
 cd ~/ktc-hard-madmax
 ./install.sh --madmax
 ```
